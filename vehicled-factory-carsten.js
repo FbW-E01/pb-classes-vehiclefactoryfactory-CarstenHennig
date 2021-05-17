@@ -71,14 +71,14 @@ for (i = 0; i < 2; i++) {
   allVehicles.push(trainFactory);
 }
 
-console.log(allVehicles);
+// console.log(allVehicles);
 
 let allResult = [""];
 typeOfVehicle = ["Biycyle", "Car", "Boat", "Blimp", "Train"];
 for (let i = 0; i < typeOfVehicle.length; i++) {
   let result = allVehicles.filter(
-    (vehicle) => vehicle.type === typeOfVehicle[i]
+    (element) => element.type === typeOfVehicle[i]
   );
-  allResult.push(result);
-  console.log(allResult);
+  console.log("All vehicles of type " + typeOfVehicle[i]);
+  console.log(result);
 }
