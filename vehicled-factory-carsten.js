@@ -26,28 +26,28 @@
 // Add your answer as comments into into your solution file.
 
 function FactoryFactory(type, make, model) {
-  this.type = type;
+  this.type = type; // basic type will be changed in object's types, i.e. "Bicycle", "Car" and so on
   this.make = make;
   this.model = model;
 }
 
 let allVehicles = [""];
 for (let i = 0; i < 5; i++) {
-  const bicycleFactory = new FactoryFactory("Bicycle", "05-17-2021", "sport");
+  const bicycleFactory = new FactoryFactory("Bicycle", "05-17-2021", "sport"); //new type "Bicycle" in new object bicycleFactory created from basic object stored in function FactoryFactory
   console.log(bicycleFactory);
   allVehicles.push(bicycleFactory);
 }
 
 let i = 0;
 do {
-  const carFactory = new FactoryFactory("Car", "05-16-2021", "Cabrio");
+  const carFactory = new FactoryFactory("Car", "05-16-2021", "Cabrio"); // new type "Car" in "new object "car" created from basic object stored in function FactoryFactory
   console.log(carFactory);
   i += 1;
   allVehicles.push(carFactory);
 } while (i < 5);
 
 for (let i = 0; i < 5; i++) {
-  const boatFactory = new FactoryFactory("Boat", "05-15-2021", "Sailing boat");
+  const boatFactory = new FactoryFactory("Boat", "05-15-2021", "Sailing boat"); // new type "Boat"
   console.log(boatFactory);
   allVehicles.push(boatFactory);
 }
@@ -56,7 +56,7 @@ let j = 0;
 while (j < 5) {
   console.log(j);
   const blimpFactory = new FactoryFactory(
-    "Blimp",
+    "Blimp", // new type "Blimp"
     "05-14-2021",
     "Cargo Zeppelin"
   );
@@ -66,13 +66,14 @@ while (j < 5) {
 }
 
 for (i = 0; i < 2; i++) {
-  const trainFactory = new FactoryFactory("Train", "05.13.2021", "ICE");
+  const trainFactory = new FactoryFactory("Train", "05.13.2021", "ICE"); // new type "Train"
   console.log(trainFactory);
   allVehicles.push(trainFactory);
 }
 
 // console.log(allVehicles);
 
+// Displaying all new vehicles sorted by type
 let allResult = [""];
 typeOfVehicle = ["Biycyle", "Car", "Boat", "Blimp", "Train"];
 for (let i = 0; i < typeOfVehicle.length; i++) {
